@@ -1,0 +1,8 @@
+{
+  "name": "Padl",
+  "app_id": "28aee4ae",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
