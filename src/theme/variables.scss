@@ -45,15 +45,19 @@ $colors: (
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
-
+$tabs-ios-tab-padding-top: 10px;
+$tabs-ios-tab-padding-bottom: 10px;
+$tabs-ios-tab-icon-color: #CCCCCC;
+$tabs-ios-tab-icon-color-active: #5A5A5A;
+$tabs-ios-tab-icon-size: 26px;
+$tabs-background: #FFFFFF;
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
-
+$tabs-md-tab-padding-top: 6px;
+$tabs-md-tab-padding-bottom: 6px;
 
 
 // App Windows Variables
