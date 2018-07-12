@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Padl } from './app.component';
 
+import { LandingPage } from '../pages/landing/landing';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 import { HomePage } from '../pages/home/home';
 import { MessagesPage } from '../pages/messages/messages';
 import { CameraPage } from '../pages/camera/camera';
@@ -16,6 +19,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     Padl,
+    LandingPage,
+    LoginPage,
+    RegisterPage,
     HomePage,
     MessagesPage,
     CameraPage,
@@ -30,6 +36,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     Padl,
+    LandingPage,
+    LoginPage,
+    RegisterPage,
     HomePage,
     MessagesPage,
     CameraPage,
