@@ -14,6 +14,30 @@
     }"
   >
     <ais-search-box></ais-search-box>
-    <ais-hits></ais-hits>
+    <ais-infinite-hits>
+      <ng-template
+        let-hits="hits"
+        let-results="results"
+        let-refine="showMore"
+      >
+
+      <div *ngIf="hits.length === 0">
+        No results found matching <strong>{{results.query}}</strong>.
+      </div>
+
+      <div *ngFor="let hit of hits">
+        <h1>
+          <ais-highlight attribute="name" [hit]="hit"></ais-highlight>
+        </h1>
+
+        <p>
+          {{hit.price}}
+        </p>
+      </div>
+
+      <button (click)="refine($event)">Show more</button>
+
+      </ng-template>
+    </ais-infinite-hits>
   </ais-instantsearch>
 </ion-content>

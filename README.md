@@ -10,3 +10,6 @@ Cordova Plugins Installed:
 Commands for testing:
 * `ionic cordova build ios`
 * `ionic cordova emulate ios`
+
+
+Find current version of Angular in `package.json`
