@@ -1,10 +1,10 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Padl</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ais-instantsearch
     [config]="{
       apiKey: 'c178615a3c307c73ffba3547b02ddc27',
@@ -13,7 +13,6 @@
       urlSync: true
     }"
   >
-    <ais-search-box></ais-search-box>
     <ais-infinite-hits>
       <ng-template
         let-hits="hits"
@@ -21,18 +20,25 @@
         let-refine="showMore"
       >
 
+      <ais-search-box placeholder="Seach for items"></ais-search-box>
+
       <div *ngIf="hits.length === 0">
-        No results found matching <strong>{{results.query}}</strong>.
+        No results found matching <strong>{{ results.query }}</strong>.
       </div>
 
-      <div *ngFor="let hit of hits">
-        <h1>
-          <ais-highlight attribute="name" [hit]="hit"></ais-highlight>
-        </h1>
+      <div id="all-hits">
+        <div class="hit-info-container" id="hit-{{ hit.offerId }}" *ngFor="let hit of hits">
+          <div class="hit-info">
+            <!-- <h1>
+              <ais-highlight attribute="name" [hit]="hit"></ais-highlight>
+            </h1> -->
+            <img src="{{ hit.pictures[0] }}" />
 
-        <p>
-          {{hit.price}}
-        </p>
+            <p class="hit-price">
+              ${{ hit.price / 100 }}.{{ (hit.price % 100).toString().padStart(2, '0') }}
+            </p>
+          </div>
+        </div>
       </div>
 
       <button (click)="refine($event)">Show more</button>
