@@ -16,6 +16,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { NgAisModule } from 'angular-instantsearch';
+
 @NgModule({
   declarations: [
     Padl,
@@ -31,7 +33,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(Padl)
+    IonicModule.forRoot(Padl),
+    NgAisModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
