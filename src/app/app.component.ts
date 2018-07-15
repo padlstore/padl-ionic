@@ -5,7 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 // import { LoginPage } from '../pages/login/login';
 // import { TabsPage } from '../pages/tabs/tabs';
-import { RegisterPage } from '../pages/register/register';
+// import { RegisterPage } from '../pages/register/register';
+import { LandingPage } from '../pages/landing/landing';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +15,8 @@ import { RegisterPage } from '../pages/register/register';
 export class Padl {
   // rootPage:any = LoginPage;
   // rootPage:any = TabsPage;
-  rootPage:any = RegisterPage;
+  // rootPage:any = RegisterPage;
+  rootPage:any = LandingPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
