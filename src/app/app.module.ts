@@ -15,6 +15,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Camera } from '@ionic-native/camera';
 
 import { NgAisModule } from 'angular-instantsearch';
 
@@ -52,6 +53,7 @@ import { NgAisModule } from 'angular-instantsearch';
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
