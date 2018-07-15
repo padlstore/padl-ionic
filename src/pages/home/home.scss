@@ -17,13 +17,14 @@ page-home {
     .ais-SearchBox-input {
         -webkit-appearance: none;
         width: calc(100% - 30px);
-        height: 40px;
-        padding-left: 10px;
-        padding-right: 60px;
+        height: 35px;
+        padding-top: 5px;
+        padding-left: 16px;
+        padding-right: 45px;
         margin-left: 15px;
         margin-right: 15px;
         vertical-align: baseline;
-        border: 0.5px #282828 solid;
+        border: 1px #aaa solid;
         border-radius: 100px;
         box-shadow: none !important;
     }
@@ -40,7 +41,7 @@ page-home {
         padding: 0;
         margin: 0;
         right: 20px;
-        top: 0;
+        top: -2px;
     }
 
     .ais-SearchBox-resetIcon {

@@ -11,4 +11,8 @@ export class HomePage {
 
   }
 
+  itemTapped(event, item) {
+    console.log(item.name);
+  }
+
 }

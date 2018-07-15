@@ -20,14 +20,15 @@
         let-refine="showMore"
       >
 
-      <ais-search-box placeholder="Seach for items"></ais-search-box>
+      <ais-search-box placeholder="Search for items"></ais-search-box>
 
       <div *ngIf="hits.length === 0">
         No results found matching <strong>{{ results.query }}</strong>.
       </div>
 
       <div id="all-hits">
-        <div class="hit-info-container" id="hit-{{ hit.offerId }}" *ngFor="let hit of hits">
+        <div class="hit-info-container" id="hit-{{ hit.offerId }}"
+        *ngFor="let hit of hits" (click)="itemTapped($event, hit)">
           <div class="hit-info">
             <!-- <h1>
               <ais-highlight attribute="name" [hit]="hit"></ais-highlight>
