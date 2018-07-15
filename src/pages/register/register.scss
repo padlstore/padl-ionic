@@ -1,0 +1,72 @@
+page-register {
+
+    .full-color {
+        background-color: color($colors, primary);
+    }
+
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content-wrapper {
+        position: relative;
+        width: 90%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .btn {
+        background-color: transparent;
+        color: color($colors, light);
+        border-color: color($colors, light);
+        transition: all 0.1s;
+    }
+
+    .btn:active {
+        background-color: color($colors, light);
+        color: color($colors, primary);
+        transition: all 0.2s;
+    }
+
+    .transparent {
+        background-color: transparent;
+    }
+
+    #register-field {
+        position: absolute;
+        bottom: 200px;
+        left: 50%;
+        width: 95%;
+        transform: translateX(-50%);
+    }
+
+    #register-button {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        width: 50%;
+        height: 55px;
+        transform: translateX(-50%);
+    }
+
+    input {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 50px;
+        padding-top: 5px;
+        padding-left: 16px;
+        padding-right: 45px;
+        margin-top: 20px;
+        vertical-align: baseline;
+        border: 1px #fff solid;
+        border-radius: 100px;
+        box-shadow: none !important;
+        color: white;
+    }
+
+    ::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}

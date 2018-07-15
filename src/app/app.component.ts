@@ -4,7 +4,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 // import { LoginPage } from '../pages/login/login';
-import { TabsPage } from '../pages/tabs/tabs';
+// import { TabsPage } from '../pages/tabs/tabs';
+import { RegisterPage } from '../pages/register/register';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +13,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 export class Padl {
   // rootPage:any = LoginPage;
-  rootPage:any = TabsPage;
+  // rootPage:any = TabsPage;
+  rootPage:any = RegisterPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
