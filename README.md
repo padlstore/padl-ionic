@@ -13,3 +13,11 @@ Commands for testing:
 
 
 Find current version of Angular in `package.json`
+
+## Common Errors
+
+### "Failed to install the requested application"
+* Make sure that the directory you are in is correctly, case-sensitive. MacOS is case-insensitive, but Ionic is.
+
+### Page transition animations not working
+* Check to make sure all the tags in the HTML source are correctly matched and closed.
