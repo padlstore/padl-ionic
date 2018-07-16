@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Slides } from 'ionic-angular';
+import { Slides, NavParams } from 'ionic-angular';
 
 @Component({
     selector: 'page-offer',
@@ -8,15 +8,13 @@ import { Slides } from 'ionic-angular';
 export class OfferPage {
 
     @ViewChild(Slides) slides: Slides;
-
     contentClass: string = "";
 
-    imgs: string[] = ["https://s3.amazonaws.com/padl.storage1/profile_pictures/dog.png",
-        "https://s3.amazonaws.com/padl.storage1/profile_pictures/cat.jpg",
-        "https://s3.amazonaws.com/padl.storage1/profile_pictures/dolphin.jpg"];
+    objectKeys = Object.keys;
+    offer: any;
 
-    constructor() {
-
+    constructor(private navParams: NavParams) {
+        this.offer = navParams.get('hit');
     }
 
     ionViewDidLoad() {
@@ -27,7 +25,6 @@ export class OfferPage {
 
     slideChanged() {
         let currentIndex = this.slides.getActiveIndex();
-        // console.log('Slide changed. Current index is:', currentIndex);
     }
 
     disableVerticalScroll() {
@@ -36,7 +33,6 @@ export class OfferPage {
 
     enableVerticalScroll() {
         this.contentClass = ""
-        // console.log("Re-enabling vertical scroll")
     }
 
 }

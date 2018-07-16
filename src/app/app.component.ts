@@ -4,10 +4,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 // import { LoginPage } from '../pages/login/login';
-// import { TabsPage } from '../pages/tabs/tabs';
+import { TabsPage } from '../pages/tabs/tabs';
 // import { RegisterPage } from '../pages/register/register';
 // import { LandingPage } from '../pages/landing/landing';
-import { OfferPage } from '../pages/offer/offer';
+// import { OfferPage } from '../pages/offer/offer';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,10 +15,10 @@ import { OfferPage } from '../pages/offer/offer';
 
 export class Padl {
   // rootPage:any = LoginPage;
-  // rootPage:any = TabsPage;
+  rootPage:any = TabsPage;
   // rootPage:any = RegisterPage;
   // rootPage:any = LandingPage;
-  rootPage:any = OfferPage;
+  // rootPage:any = OfferPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
