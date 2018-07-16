@@ -14,7 +14,11 @@ export class OfferPage {
     offer: any;
 
     priceToString(price) {
-        let output = '$' + (price / 100).toString() + '.' + (price % 100).toString().padStart(2, '0');
+        let cents = (price % 100).toString();
+        let dollars = (price / 100).toString();
+        let centPadding = '0'.repeat(2 - cents.length);
+
+        let output = '$' + dollars + '.' + centPadding + cents;
         return output;
     }
 

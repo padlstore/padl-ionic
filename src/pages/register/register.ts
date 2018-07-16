@@ -9,4 +9,8 @@ export class RegisterPage {
     constructor() {
 
     }
+
+    registerTapped(event) {
+        console.log("register")
+    }
 }

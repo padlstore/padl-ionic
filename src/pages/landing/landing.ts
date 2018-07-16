@@ -15,12 +15,10 @@ export class LandingPage {
 
     loginTapped(event) {
         this.navCtrl.push(LoginPage, {}, {animate: true, direction: 'forward'})
-        console.log("Tapped login")
     }
 
     registerTapped(event) {
         // this.navCtrl.push(LoginPage, {}, {animate: true, direction: 'forward'})
         this.navCtrl.push(RegisterPage, {}, {animate: true, direction: 'forward'})
-        console.log("Tapped register")
     }
 }

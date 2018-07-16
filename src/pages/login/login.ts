@@ -9,4 +9,8 @@ export class LoginPage {
     constructor() {
 
     }
+
+    loginTapped(event) {
+        console.log("login")
+    }
 }

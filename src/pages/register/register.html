@@ -1,4 +1,6 @@
-<ion-navbar></ion-navbar>
+<ion-header no-shadow no-border>
+  <ion-navbar color="primary"></ion-navbar>
+</ion-header>
 
 <ion-content>
   <div class="wrapper full-color" ion-fixed>
@@ -13,7 +15,7 @@
         <input class="transparent" type="password" name="password-confirm" placeholder="Confirm Password" />
       </form>
 
-      <button id="register-button" class="btn" ion-button round outline>Register</button>
+      <button (click)="registerTapped($event)" id="register-button" class="btn" ion-button round outline>Register</button>
     </div>
   </div>
 </ion-content>

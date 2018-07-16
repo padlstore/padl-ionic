@@ -1,4 +1,6 @@
-<ion-navbar></ion-navbar>
+<ion-header no-shadow no-border>
+  <ion-navbar color="primary"></ion-navbar>
+</ion-header>
 
 <ion-content>
   <div class="wrapper full-color" ion-fixed>
@@ -10,7 +12,7 @@
         <input class="transparent" type="password" name="password" placeholder="Password" />
       </form>
 
-      <button id="login-button" class="btn" ion-button round outline>Login</button>
+      <button (click)="loginTapped($event)" id="login-button" class="btn" ion-button round outline>Login</button>
     </div>
   </div>
 </ion-content>
