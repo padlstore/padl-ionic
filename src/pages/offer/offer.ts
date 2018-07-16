@@ -13,8 +13,13 @@ export class OfferPage {
     objectKeys = Object.keys;
     offer: any;
 
+    priceToString(price) {
+        let output = '$' + (price / 100).toString() + '.' + (price % 100).toString().padStart(2, '0');
+        return output;
+    }
+
     constructor(private navParams: NavParams) {
-        this.offer = navParams.get('hit');
+        this.offer = navParams.get('hit')
     }
 
     ionViewDidLoad() {

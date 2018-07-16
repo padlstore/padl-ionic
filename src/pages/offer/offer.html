@@ -1,3 +1,7 @@
+<ion-header>
+  <ion-navbar></ion-navbar>
+</ion-header>
+
 <ion-content [ngClass]="contentClass" on-release="enableVerticalScroll()">
   <div id="image-viewer">
     <ion-slides (ionSlideDrag)="disableVerticalScroll()" (ionSlideNextEnd)="enableVerticalScroll()" (ionSlidePrevEnd)="enableVerticalScroll()"
@@ -10,5 +14,41 @@
     </ion-slides>
   </div>
 
-  <h1>Testing</h1>
+  <div id="body-content">
+    <div id="offer-name">
+      <h1>{{ offer.name }}</h1>
+    </div>
+
+    <div id="seller-info">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-8>
+            <p>{{ offer.seller }}</p>
+          </ion-col>
+
+          <ion-col col-4>
+            <p>{{ priceToString(offer.price) }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div id="offer-details">
+      <p>{{ offer.description }}</p>
+    </div>
+  </div>
+
+  <div id="actions" ion-fixed>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button class="btn" ion-button round outline>Message Seller</button>
+        </ion-col>
+
+        <ion-col>
+          <button class="btn" ion-button round outline>Purchase ({{ priceToString(offer.price) }})</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>
