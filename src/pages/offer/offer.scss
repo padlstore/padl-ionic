@@ -1,0 +1,22 @@
+page-offer {
+  #image-viewer {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+  }
+
+  ion-slides {
+    position: absolute; // background-color: red;
+    top: 0;
+    left: 0;
+  }
+
+  .offer-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .no-scroll .scroll-content {
+    overflow: hidden;
+  }
+}

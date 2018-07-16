@@ -12,6 +12,7 @@ import { CameraPage } from '../pages/camera/camera';
 import { NotificationsPage } from '../pages/notifications/notifications';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
+import { OfferPage } from '../pages/offer/offer';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,6 +31,7 @@ import { NgAisModule } from 'angular-instantsearch';
     CameraPage,
     NotificationsPage,
     ProfilePage,
+    OfferPage,
     TabsPage
   ],
   imports: [
@@ -48,6 +50,7 @@ import { NgAisModule } from 'angular-instantsearch';
     CameraPage,
     NotificationsPage,
     ProfilePage,
+    OfferPage,
     TabsPage
   ],
   providers: [

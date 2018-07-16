@@ -1,0 +1,14 @@
+<ion-content [ngClass]="contentClass" on-release="enableVerticalScroll()">
+  <div id="image-viewer">
+    <ion-slides 
+     (ionSlideDrag)="disableVerticalScroll()" (ionSlideNextEnd)="enableVerticalScroll()"
+     (ionSlidePrevEnd)="enableVerticalScroll()" (ionSlideTap)="enableVerticalScroll()"
+     loop pager resistance="false">
+      <ion-slide *ngFor="let img of imgs">
+          <img class="offer-image" src="{{ img }}" />
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <h1>Testing</h1>
+</ion-content>
