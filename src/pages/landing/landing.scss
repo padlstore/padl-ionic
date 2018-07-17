@@ -33,6 +33,19 @@ page-landing {
         transition: all 0.2s;
     }
 
+    .bare-btn {
+        background-color: color($colors, light);
+        color: color($colors, primary);
+        border-color: color($colors, light);
+    }
+
+    .bare-btn:active {
+        background-color: transparent !important;
+        color: color($colors, light) !important;
+        border-color: color($colors, light);
+        transition: all 0.2s;
+    }
+
     #buttons {
         position: absolute;
         bottom: 100px;

@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
 import { Padl } from './app.component';
 
 import { LandingPage } from '../pages/landing/landing';
@@ -21,9 +22,11 @@ import { Camera } from '@ionic-native/camera';
 import { NgAisModule } from 'angular-instantsearch';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Config } from './config';
 
 import { AuthService } from '../services/auth.service'
+import { ProfileService } from '../services/profile.service'
 
 @NgModule({
   declarations: [
@@ -41,6 +44,7 @@ import { AuthService } from '../services/auth.service'
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(Padl),
     NgAisModule.forRoot(),
     AngularFireModule.initializeApp(Config.firebaseConfig)
@@ -63,9 +67,11 @@ import { AuthService } from '../services/auth.service'
     StatusBar,
     SplashScreen,
     Camera,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireAuth,
-    AuthService
+    AngularFireDatabase,
+    AuthService,
+    ProfileService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

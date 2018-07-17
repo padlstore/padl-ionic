@@ -20,4 +20,24 @@ export class AuthService {
             credentials.password
         );
     }
+
+    get authenticated(): boolean {
+        return this.user !== null;
+    }
+
+    getEmail() {
+        return this.user && this.user.email;
+    }
+
+    getId() {
+        return this.user && this.user.uid;
+    }
+
+    getName() {
+        return this.user && this.user.displayName;
+    }
+
+    signOut(): Promise<void> {
+        return this.afAuth.auth.signOut();
+    }
 }

@@ -25,6 +25,7 @@ export class Padl {
   }
 
   initializeApp() {
+    // Sign the user in if they are already authenticated.
     this.auth.afAuth.authState.subscribe(user => {
       if (user) {
         this.rootPage = TabsPage;

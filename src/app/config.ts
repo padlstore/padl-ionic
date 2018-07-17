@@ -1,5 +1,5 @@
 export class Config {
-    public static SERVER_URL: string = 'http://localhost:3000/'
+    public static SERVER_URL: string = 'http://localhost:3000'
     public static firebaseConfig = {
         apiKey: "AIzaSyBAXmQCzZJsuAYfigWvt2-s_qRXmxnzBQc",
         authDomain: "padl-origin.firebaseapp.com",

@@ -14,7 +14,7 @@ export class LoginPage {
 
     constructor(
         private navCtrl: NavController,
-        private auth: AuthService,
+        public auth: AuthService,
         private toastCtrl: ToastController) {
 
     }
@@ -35,7 +35,7 @@ export class LoginPage {
             password: this.password
         })
         .then(value => {
-            console.log("You've logged in as:", this.auth.afAuth.idToken);
+            console.log("You've logged in as:", this.auth.getId());
             this.navCtrl.push(TabsPage);
         })
         .catch(err => {
@@ -43,4 +43,5 @@ export class LoginPage {
             this.presentToast(err.message);
         });
     }
+
 }
