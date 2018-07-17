@@ -65,7 +65,10 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-camera": {},
+      "cordova-plugin-camera": {
+        "CAMERA_USAGE_DESCRIPTION": "Padl would like to access your camera",
+        "PHOTOLIBRARY_USAGE_DESCRIPTION": "Padl would like to access your photo library"
+      },
       "cordova-plugin-statusbar": {},
       "cordova-plugin-advanced-http": {}
     },
