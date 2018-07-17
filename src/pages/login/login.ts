@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NavController, ToastController } from 'ionic-angular';
+import { AuthService } from '../../services/auth.service';
+import { TabsPage } from '../tabs/tabs';
 
 @Component({
     selector: 'page-login',
@@ -6,11 +9,38 @@ import { Component } from '@angular/core';
 })
 export class LoginPage {
 
-    constructor() {
+    email: string;
+    password: string;
+
+    constructor(
+        private navCtrl: NavController,
+        private auth: AuthService,
+        private toastCtrl: ToastController) {
 
     }
 
+    presentToast(message) {
+        const toast = this.toastCtrl.create({
+            message: message,
+            position: 'top',
+            duration: 3000
+        });
+        toast.present();
+    }
+
     loginTapped(event) {
-        console.log("login")
+        console.log(this.email + '/' + this.password);
+        this.auth.signInWithEmail({
+            email: this.email,
+            password: this.password
+        })
+        .then(value => {
+            console.log("You've logged in as:", this.auth.afAuth.idToken);
+            this.navCtrl.push(TabsPage);
+        })
+        .catch(err => {
+            console.log('Something went wrong:', err.message);
+            this.presentToast(err.message);
+        });
     }
 }

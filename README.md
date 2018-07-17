@@ -32,3 +32,6 @@
 
 ### Cannot find module "."
 * The auto import feature VSCode probably tried to import `angular-core` via `../../../node_modules`; that doesn't work. Need to import via `angular-core`.
+
+### `RunTime Error: Network Error`
+* If the error has to do with polyfills, try adding `<allow-navigation href="*">` to `config.xml`.

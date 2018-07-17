@@ -19,6 +19,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from '@ionic-native/camera';
 
 import { NgAisModule } from 'angular-instantsearch';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Config } from './config';
+
+import { AuthService } from '../services/auth.service'
 
 @NgModule({
   declarations: [
@@ -37,7 +42,8 @@ import { NgAisModule } from 'angular-instantsearch';
   imports: [
     BrowserModule,
     IonicModule.forRoot(Padl),
-    NgAisModule.forRoot()
+    NgAisModule.forRoot(),
+    AngularFireModule.initializeApp(Config.firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -57,7 +63,9 @@ import { NgAisModule } from 'angular-instantsearch';
     StatusBar,
     SplashScreen,
     Camera,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AngularFireAuth,
+    AuthService
   ]
 })
 export class AppModule {}

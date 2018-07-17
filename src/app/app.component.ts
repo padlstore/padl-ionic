@@ -2,25 +2,19 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AuthService } from '../services/auth.service';
 
-// import { LoginPage } from '../pages/login/login';
-// import { TabsPage } from '../pages/tabs/tabs';
-// import { RegisterPage } from '../pages/register/register';
 import { LandingPage } from '../pages/landing/landing';
-// import { OfferPage } from '../pages/offer/offer';
 
 @Component({
   templateUrl: 'app.html'
 })
 
 export class Padl {
-  // rootPage:any = LoginPage;
-  // rootPage:any = TabsPage;
-  // rootPage:any = RegisterPage;
-  rootPage:any = LandingPage;
-  // rootPage:any = OfferPage;
+  rootPage: any = LandingPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar,
+    splashScreen: SplashScreen, private auth: AuthService) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
