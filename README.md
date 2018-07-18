@@ -14,6 +14,11 @@
 * `ionic cordova plugin add cordova-plugin-advanced-http`
 ### Algolia InstantSearch
 * `npm install --save angular-instantsearch`
+### Firebase Realtime Database
+* `npm install --save firebase angularfire2`
+### Stripe
+* `ionic cordova plugin add cordova-plugin-stripe`
+* `
 
 ## Commands for testing
 * `ionic cordova build ios`

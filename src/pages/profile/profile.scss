@@ -1,3 +1,30 @@
 page-profile {
+    #user-info {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    #profile-pic {
+        height: 125px;
+        width: 125px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .offer-row {
+        margin-top: 20px;
+
+        h1 {
+            padding-left: 15px;
+        }
+    }
+
+    .item-row {
+        overflow-x: scroll !important;
+        overflow-y: hidden;
+        height: 150px;
+        width: calc(100% - 30px);
+        margin: auto;
+    }
 
 }
