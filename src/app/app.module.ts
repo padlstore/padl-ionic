@@ -25,8 +25,9 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Config } from './config';
 
-import { AuthService } from '../services/auth.service'
-import { ProfileService } from '../services/profile.service'
+import { AuthService } from '../services/auth.service';
+import { ProfileService } from '../services/profile.service';
+import { OffersService } from '../services/offers.service';
 
 @NgModule({
   declarations: [
@@ -64,13 +65,14 @@ import { ProfileService } from '../services/profile.service'
     TabsPage
   ],
   providers: [
+    AuthService,
+    ProfileService,
+    OffersService,
     StatusBar,
     SplashScreen,
     Camera,
     AngularFireAuth,
     AngularFireDatabase,
-    AuthService,
-    ProfileService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -91,4 +91,5 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
     <plugin name="cordova-plugin-advanced-http" spec="^1.11.1" />
     <allow-navigation href="http://18.40.9.146:8100" />
+    <plugin name="cordova-plugin-stripe" spec="^1.5.3" />
 </widget>

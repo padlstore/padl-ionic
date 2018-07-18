@@ -9,23 +9,36 @@
         <ion-grid>
             <ion-row>
                 <ion-col col-3>
-                    <p #profilePic>
-                        hieloo
-                    </p>
+                    <img #profilePic id="profile-pic"/>
                 </ion-col>
 
                 <ion-col col-9>
-
+                    <h2 #profileName id="user-name"></h2>
+                    <h3 #profileRating id="rating-display"></h3>
                 </ion-col>
             </ion-row>
         </ion-grid>
     </div>
 
-    <div id="items-bought" class="item-row">
+    <div id="offers" class="offer-row">
+        <h1>Your Offers</h1>
+        <ion-grid>
+            <ion-row nowrap #profileOfferSellingRow class="item-row">
 
+            </ion-row>
+        </ion-grid>
     </div>
     
-    <div id="items-sold" class="item-row">
+    <div id="purchases" class="offer-row">
+        <h1>Your Purchases</h1>
+        <ion-grid>
+            <ion-row class="item-row">
+                <ng-template>
+                    <ion-col col-3>
 
+                    </ion-col>
+                </ng-template>
+            </ion-row>
+        </ion-grid>
     </div>
 </ion-content>
