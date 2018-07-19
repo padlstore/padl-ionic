@@ -2,13 +2,16 @@
   <div class="wrapper full-color" ion-fixed>
 
     <div class="content-wrapper">
-      <form id="login-field" action="">
-        <input class="transparent" [(ngModel)]="email" type="email" name="email" placeholder="Email Address" pattern=".+@mit.edu"
-          size="15" required title="Must be an edu email." />
-        <input class="transparent" [(ngModel)]="password" type="password" name="password" placeholder="Password" />
-      </form>
+      <div id="form-fields">
 
-      <button (click)="loginTapped($event)" id="login-button" class="btn" ion-button round outline>Login</button>
+        <form id="payment-form" action="">
+          <div id="card-element"></div>
+          <div id="card-errors"></div>
+          <button type="submit" id="purchase-button" class="btn" ion-button round outline>Confirm Purchase</button>
+          <button id="cancel-button" class="btn" ion-button round danger outline>Cancel</button>
+        </form>
+
+      </div>
     </div>
   </div>
 </ion-content>

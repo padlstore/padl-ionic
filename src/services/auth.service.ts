@@ -33,6 +33,19 @@ export class AuthService {
         return this.user && this.user.uid;
     }
 
+    async getToken() {
+        if (this.user) {
+            try {
+                let token = await this.user.getIdToken();
+                return token;
+            } catch (err) {
+                console.log("Couldn't get user token");
+                return false;
+            }
+        }
+        return false;
+    }
+
     getName() {
         return this.user && this.user.displayName;
     }

@@ -9,7 +9,7 @@ import { OffersService } from '../../services/offers.service';
 export class ProfilePage {
 
     @ViewChild('profilePic', {read: ElementRef}) propic: ElementRef;
-    @ViewChild('profileOfferSellingRow', {read: ElementRef}) bought: ElementRef;
+    @ViewChild('profileOffersRow', {read: ElementRef}) bought: ElementRef;
     @ViewChild('profileName', {read: ElementRef}) username: ElementRef;
     @ViewChild('profileRating', {read: ElementRef}) rating: ElementRef;
 

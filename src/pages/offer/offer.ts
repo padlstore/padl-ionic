@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { Slides, NavParams } from 'ionic-angular';
+import { Slides, NavParams, NavController } from 'ionic-angular';
+import { PaymentPage } from '../payment/payment';
 
 @Component({
     selector: 'page-offer',
@@ -13,6 +14,13 @@ export class OfferPage {
     objectKeys = Object.keys;
     offer: any;
 
+    constructor(
+        private navParams: NavParams,
+        private navCtrl: NavController
+    ) {
+        this.offer = navParams.get('hit')
+    }
+
     priceToString(price) {
         let cents = (price % 100).toString();
         let dollars = (price / 100).toString();
@@ -20,10 +28,6 @@ export class OfferPage {
 
         let output = '$' + dollars + '.' + centPadding + cents;
         return output;
-    }
-
-    constructor(private navParams: NavParams) {
-        this.offer = navParams.get('hit')
     }
 
     ionViewDidLoad() {
@@ -42,6 +46,10 @@ export class OfferPage {
 
     enableVerticalScroll() {
         this.contentClass = ""
+    }
+
+    purchaseTapped(): void {
+        this.navCtrl.push(PaymentPage, { offer: this.offer });
     }
 
 }

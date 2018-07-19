@@ -30,6 +30,7 @@ import { Config } from './config';
 import { AuthService } from '../services/auth.service';
 import { ProfileService } from '../services/profile.service';
 import { OffersService } from '../services/offers.service';
+import { PaymentService } from '../services/payment.service';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { OffersService } from '../services/offers.service';
     AuthService,
     ProfileService,
     OffersService,
+    PaymentService,
     StatusBar,
     SplashScreen,
     Camera,
