@@ -6,39 +6,29 @@
 
 <ion-content>
     <div id="user-info">
-        <ion-grid>
-            <ion-row>
-                <ion-col col-3>
-                    <img #profilePic id="profile-pic"/>
-                </ion-col>
+        <div id="profile-pic-container">
+            <img #profilePic id="profile-pic"/>
+        </div>
 
-                <ion-col col-9>
-                    <h2 #profileName id="user-name"></h2>
-                    <h3 #profileRating id="rating-display"></h3>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
+        <div id="profile-info-container">
+            <h2 #profileName id="user-name"></h2>
+            <h3 #profileRating id="rating-display"></h3>
+        </div>
     </div>
+
+    <div class="clearfix"></div>
 
     <div id="offers" class="offer-row">
         <h1>Your Offers</h1>
-        <ion-grid>
-            <ion-row nowrap #profileOfferSellingRow class="item-row">
+        <div #profileOfferSellingRow class="item-row">
 
-            </ion-row>
-        </ion-grid>
+        </div>
     </div>
     
     <div id="purchases" class="offer-row">
         <h1>Your Purchases</h1>
-        <ion-grid>
-            <ion-row class="item-row">
-                <ng-template>
-                    <ion-col col-3>
+        <div class="item-row">
 
-                    </ion-col>
-                </ng-template>
-            </ion-row>
-        </ion-grid>
+        </div>
     </div>
 </ion-content>

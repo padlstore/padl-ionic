@@ -1,0 +1,14 @@
+<ion-content>
+  <div class="wrapper full-color" ion-fixed>
+
+    <div class="content-wrapper">
+      <form id="login-field" action="">
+        <input class="transparent" [(ngModel)]="email" type="email" name="email" placeholder="Email Address" pattern=".+@mit.edu"
+          size="15" required title="Must be an edu email." />
+        <input class="transparent" [(ngModel)]="password" type="password" name="password" placeholder="Password" />
+      </form>
+
+      <button (click)="loginTapped($event)" id="login-button" class="btn" ion-button round outline>Login</button>
+    </div>
+  </div>
+</ion-content>

@@ -14,6 +14,7 @@ import { NotificationsPage } from '../pages/notifications/notifications';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { OfferPage } from '../pages/offer/offer';
+import { PaymentPage } from '../pages/payment/payment';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,8 +24,9 @@ import { NgAisModule } from 'angular-instantsearch';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { Config } from './config';
+import { Stripe } from '@ionic-native/stripe';
 
+import { Config } from './config';
 import { AuthService } from '../services/auth.service';
 import { ProfileService } from '../services/profile.service';
 import { OffersService } from '../services/offers.service';
@@ -41,6 +43,7 @@ import { OffersService } from '../services/offers.service';
     NotificationsPage,
     ProfilePage,
     OfferPage,
+    PaymentPage,
     TabsPage
   ],
   imports: [
@@ -62,6 +65,7 @@ import { OffersService } from '../services/offers.service';
     NotificationsPage,
     ProfilePage,
     OfferPage,
+    PaymentPage,
     TabsPage
   ],
   providers: [
@@ -73,6 +77,7 @@ import { OffersService } from '../services/offers.service';
     Camera,
     AngularFireAuth,
     AngularFireDatabase,
+    Stripe,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

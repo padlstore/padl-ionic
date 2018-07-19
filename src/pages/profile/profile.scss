@@ -1,14 +1,56 @@
 page-profile {
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
     #user-info {
         padding-top: 10px;
         padding-left: 10px;
     }
 
+    #profile-pic-container {
+        position: relative;
+        float: left;
+        height: 100px;
+        width: 100px;
+    }
+    
     #profile-pic {
-        height: 125px;
-        width: 125px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        height: 90%;
+        width: 90%;
         overflow: hidden;
         border-radius: 50%;
+        margin: auto;
+    }
+
+    #profile-info-container {
+        float: left;
+        width: calc(100% - 100px);
+        height: 100px;
+        padding: 10px;
+
+        h2 {
+            padding: 0;
+            padding-top: 15px;
+            margin: 0;
+            float: clear;
+            font-size: 14pt;
+            text-align: center;
+        }
+    }
+
+    .clearfix {
+        clear: both;
     }
 
     .offer-row {
@@ -25,6 +67,17 @@ page-profile {
         height: 150px;
         width: calc(100% - 30px);
         margin: auto;
+        white-space: nowrap;
     }
+
+    .offer-box {
+        display: inline-block;
+        height: 150px;
+        width: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
 
 }
