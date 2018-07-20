@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar></ion-navbar>
+</ion-header>
+
+<ion-content [ngClass]="contentClass" on-release="enableVerticalScroll()">
+  <div id="image-viewer">
+    <ion-slides (ionSlideDrag)="disableVerticalScroll()" (ionSlideNextEnd)="enableVerticalScroll()" (ionSlidePrevEnd)="enableVerticalScroll()"
+      (ionSlideTap)="enableVerticalScroll()" pager>
+
+    </ion-slides>
+  </div>
+
+  <div id="body-content">
+    <div id="offer-name">
+      <input type="text" placeholder="Offer name"/>
+    </div>
+
+    <div id="seller-info">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-8>
+            <p>{{ this.auth.getName() }}</p>
+          </ion-col>
+
+          <ion-col col-4>
+            <input type="numeric" placeholder="0.00" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div id="offer-details">
+      <input type="text" placeholder="Enter a description..." />
+    </div>
+  </div>
+
+  <div id="actions" ion-fixed>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button class="btn" ion-button round danger outline>Cancel</button>
+        </ion-col>
+
+        <ion-col>
+          <button (click)="postTapped()" class="btn" ion-button round outline>Post Offer</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,51 @@
+page-create {
+    #image-viewer {
+      position: relative;
+      width: 100%;
+      padding-top: 100%;
+    }
+  
+    ion-slides {
+      position: absolute; // background-color: red;
+      top: 0;
+      left: 0;
+    }
+  
+    .offer-image {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .no-scroll .scroll-content {
+      overflow: hidden;
+    }
+  
+    #body-content {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 80px;
+    }
+  
+    #actions {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(5px);
+      box-shadow: 0px -1px 5px #aaa;
+      height: 80px;
+      width: 100%;
+      bottom: 0px;
+      left: 0;
+    }
+  
+    .btn {
+      background-color: transparent;
+      color: color($colors, primary);
+      border-color: color($colors, primary);
+      transition: all 0.1s;
+      width: 100%;
+      margin: auto;
+      display: inline-block;
+      height: 55px;
+    }
+  }
