@@ -5,36 +5,32 @@
 <ion-content [ngClass]="contentClass" on-release="enableVerticalScroll()">
   <div id="image-viewer">
     <ion-slides (ionSlideDrag)="disableVerticalScroll()" (ionSlideNextEnd)="enableVerticalScroll()" (ionSlidePrevEnd)="enableVerticalScroll()"
-      (ionSlideTap)="enableVerticalScroll()" loop pager resistance="false">
-      <ng-container *ngFor="let key of objectKeys(offer.pictures)">
-        <ion-slide *ngIf="key !== 'sentinel'">
-          <img class="offer-image" src="{{ offer.pictures[key] }}" />
-        </ion-slide>
-      </ng-container>
+      (ionSlideTap)="enableVerticalScroll()" pager>
+
     </ion-slides>
   </div>
 
   <div id="body-content">
     <div id="offer-name">
-      <h1>{{ offer.name }}</h1>
+      <input type="text" placeholder="Offer name"/>
     </div>
 
     <div id="seller-info">
       <ion-grid>
         <ion-row>
           <ion-col col-8>
-            <p>{{ offer.seller }}</p>
+            <p>{{ this.auth.getName() }}</p>
           </ion-col>
 
           <ion-col col-4>
-            <p>{{ priceToString(offer.price) }}</p>
+            <input type="numeric" placeholder="0.00" />
           </ion-col>
         </ion-row>
       </ion-grid>
     </div>
 
     <div id="offer-details">
-      <p>{{ offer.description }}</p>
+      <input type="text" placeholder="Enter a description..." />
     </div>
   </div>
 
@@ -42,11 +38,11 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <button class="btn" ion-button round outline>Message Seller</button>
+          <button class="btn" ion-button round danger outline>Cancel</button>
         </ion-col>
 
         <ion-col>
-          <button (click)="purchaseTapped()" class="btn" ion-button round outline>Purchase ({{ priceToString(offer.price) }})</button>
+          <button (click)="postTapped()" class="btn" ion-button round outline>Post Offer</button>
         </ion-col>
       </ion-row>
     </ion-grid>

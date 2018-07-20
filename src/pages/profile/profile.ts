@@ -9,7 +9,7 @@ import { OffersService } from '../../services/offers.service';
 export class ProfilePage {
 
     @ViewChild('profilePic', {read: ElementRef}) propic: ElementRef;
-    @ViewChild('profileOfferSellingRow', {read: ElementRef}) bought: ElementRef;
+    @ViewChild('profileOffersRow', {read: ElementRef}) bought: ElementRef;
     @ViewChild('profileName', {read: ElementRef}) username: ElementRef;
     @ViewChild('profileRating', {read: ElementRef}) rating: ElementRef;
 
@@ -23,7 +23,7 @@ export class ProfilePage {
 
     public updateUserName(): void {
         this.profileService.getProfile().subscribe(data => {
-            // this.username.nativeElement.textContent = data.displayName;
+            this.username.nativeElement.textContent = data.displayName;
             // this.renderer.(this.username.nativeElement, data.displayName);
         })
     }
@@ -54,12 +54,10 @@ export class ProfilePage {
     private addOffersToDOM(response, element: ElementRef) {
         for (let key in response) {
             console.log('adding offer to DOM:', key);
-            let item = this.renderer.createElement('ion-col');
-            this.renderer.setAttribute(item, 'col-3', 'true');
+            let item = this.renderer.createElement('div');
+            this.renderer.addClass(item, 'offer-box');
             console.log(response[key]['pictures']['0'])
             this.renderer.setStyle(item, 'backgroundImage', `url(${response[key]['pictures']['0']})`);
-            this.renderer.setStyle(item, 'backgroundSize', 'contain');
-            this.renderer.setStyle(item, 'backgroundRepeat', 'no-repeat');
             this.renderer.appendChild(element.nativeElement, item);
         }
     }

@@ -18,7 +18,7 @@
 * `npm install --save firebase angularfire2`
 ### Stripe
 * `ionic cordova plugin add cordova-plugin-stripe`
-* `
+* `npm install --save @ionic-native/stripe`
 
 ## Commands for testing
 * `ionic cordova build ios`
@@ -40,3 +40,6 @@
 
 ### `RunTime Error: Network Error`
 * If the error has to do with polyfills, try adding `<allow-navigation href="*">` to `config.xml`.
+
+### `POST` request getting interpreted as `GET` request
+* Make sure to include `https://`; the redirect can cause the `POST` request to become transformed in to a `GET` request.
