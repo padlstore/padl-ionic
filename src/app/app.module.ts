@@ -15,6 +15,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { OfferPage } from '../pages/offer/offer';
 import { PaymentPage } from '../pages/payment/payment';
+import { CreatePage } from '../pages/create/create';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -44,6 +45,7 @@ import { PaymentService } from '../services/payment.service';
     NotificationsPage,
     ProfilePage,
     OfferPage,
+    CreatePage,
     PaymentPage,
     TabsPage
   ],
@@ -66,6 +68,7 @@ import { PaymentService } from '../services/payment.service';
     NotificationsPage,
     ProfilePage,
     OfferPage,
+    CreatePage,
     PaymentPage,
     TabsPage
   ],
