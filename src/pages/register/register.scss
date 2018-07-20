@@ -21,13 +21,11 @@ page-register {
         background-color: transparent;
         color: color($colors, light);
         border-color: color($colors, light);
-        transition: all 0.1s;
     }
 
     .btn:active {
         background-color: color($colors, light);
         color: color($colors, primary);
-        transition: all 0.2s;
     }
 
     .transparent {

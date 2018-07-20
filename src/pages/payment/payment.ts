@@ -14,6 +14,7 @@ export class PaymentPage {
     offer: any; // The offer that this payment is for
     stripe = Stripe(Config.STRIPE_PUBLISHABLE_KEY);
     card: any;
+    form: any;
 
     constructor(
         public navCtrl: NavController,
@@ -81,8 +82,8 @@ export class PaymentPage {
             }
         });
 
-        var form = document.getElementById('payment-form');
-        form.addEventListener('submit', event => {
+        this.form = document.getElementById('payment-form');
+        this.form.addEventListener('submit', event => {
             event.preventDefault();
 
             this.stripe.createToken(this.card).then(result => {
@@ -93,7 +94,14 @@ export class PaymentPage {
                     console.log(`${new Date()} Created Token: ${JSON.stringify(result.token)}`);
                     this.attemptPurchase(result.token);
                 }
-            });
+            }).catch(err => {
+                console.log(err.message)
+                console.log('Payment canceled')
+            })
         });
+    }
+
+    cancelTapped(): void {
+        this.navCtrl.pop();
     }
 }

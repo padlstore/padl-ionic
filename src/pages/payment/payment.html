@@ -8,7 +8,7 @@
           <div id="card-element"></div>
           <div id="card-errors"></div>
           <button type="submit" id="purchase-button" class="btn" ion-button round outline>Confirm Purchase</button>
-          <button id="cancel-button" class="btn" ion-button round danger outline>Cancel</button>
+          <button id="cancel-button" (click)="cancelTapped()" class="btn btn-danger" ion-button round outline>Cancel</button>
         </form>
 
       </div>
